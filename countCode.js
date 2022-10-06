@@ -2,15 +2,19 @@ const data = ["FWmcfgAWxe","KnFJXGcACq","cCYApSPiX0","iHwbq2giBx","X5Ebl6sjLf","
 
 
 
-let numbers = 0
+let wordsChecked = 0
 let amountOfWordsWithFirstI = 0
 function countCode(a){
     
-    while (numbers<data.length){
-        if (data[numbers].startsWith(a)){
+    while (wordsChecked<data.length){
+        if (data[wordsChecked].startsWith(a)){
             amountOfWordsWithFirstI++
+            
         }
-        numbers++
+        wordsChecked++
+    }
+    while (wordsChecked=>data.length){
+        return
     }
 }
 countCode("i")
